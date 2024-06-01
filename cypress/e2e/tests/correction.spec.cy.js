@@ -5,5 +5,6 @@ describe('Sign Up Journeys', () => {
     cy.insertBasicDetails()
     cy.insertSocialDetailsAndSignUp()
     cy.verifyOTPPage()
+    cy.insertOTP()
   })
 })
