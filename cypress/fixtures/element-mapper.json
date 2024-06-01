@@ -1,0 +1,25 @@
+{
+  "homePage":{
+    "homeSignUpButton": ".Header2_header__nav__btn__wRKfY div:nth-child(2) button"
+  },
+  "baseDetails":{
+    "fullNameField": "#fullname",
+    "bizNameField": "#businessname",
+    "bizEmailField": "#businessemail",
+    "bizPhoneField": "#businessphonenumber",
+    "bizRegNumField": "#businessRegNum",
+    "nextButton": "button[type='button']"
+  },
+  "socialDetails":{
+    "websiteField": "#website",
+    "instagramField": "#instagramHandle",
+    "twitterField": "#twitterHandle",
+    "infoSourceField": "div[placeholder]",
+    "infoOptionDropdown": ".MimaDropdown_select__options__xLi7K:nth-child(2)",
+    "passwordField": "#password",
+    "signUpButton": "button[type='submit']"
+  },
+  "otpPage":{
+    "thankYouHeader": "h2[class='Onboarding_left__h2__w+P+z']"
+  }
+}
