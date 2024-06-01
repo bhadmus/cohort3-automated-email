@@ -3,6 +3,7 @@ let home
 let basic
 let social
 let otpPage
+let inboxId
 before('load all element locators', ()=>{
     cy.fixture('element-mapper').then((ele)=>{
         home = ele.homePage
@@ -19,7 +20,7 @@ Cypress.Commands.add('clickSignUpButtonOnHomePage', ()=>{
 Cypress.Commands.add('insertBasicDetails', ()=>{
     cy.typeAnyText(basic.fullNameField, faker.person.fullName())
     cy.typeAnyText(basic.bizNameField, faker.company.buzzVerb())
-    cy.typeAnyText(basic.bizEmailField, faker.internet.email({provider: 'yopmail.com'}))
+    cy.insertEmail()
     cy.typeAnyText(basic.bizPhoneField, faker.phone.number('+23481########'))
     cy.typeAnyText(basic.bizRegNumField, 'RC-7834')
     cy.clickAnyElement(basic.nextButton)
@@ -38,3 +39,20 @@ Cypress.Commands.add('insertSocialDetailsAndSignUp', ()=>{
 Cypress.Commands.add('verifyOTPPage', ()=>{
     cy.get(otpPage.thankYouHeader).should('be.visible').and('have.text', 'Thank you for Signing up with Mima.')
 })
+
+Cypress.Commands.add('insertEmail', ()=>{
+    cy.mailslurp().then(emailCreator => emailCreator.createInbox().then(inbox =>{
+        inboxId = inbox.id
+        const emailAddress = inbox.emailAddress
+        cy.typeAnyText(basic.bizEmailField, emailAddress)
+
+        const loginDetails = `
+                {
+                    "email": "${emailAddress}",
+                    "password": "Pa$$w0rd!"
+                }
+        `
+        cy.writeFile('cypress/fixtures/login-details.json', loginDetails)
+    }))
+})
+

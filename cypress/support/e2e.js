@@ -16,6 +16,8 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './command/common-actions'
+import 'cypress-fill-command'
+import 'cypress-mailslurp'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 before(()=>{

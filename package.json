@@ -19,6 +19,8 @@
   "homepage": "https://github.com/bhadmus/cohort3-automated-email#readme",
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "cypress": "^13.10.0"
+    "cypress": "^13.10.0",
+    "cypress-fill-command": "^1.0.2",
+    "cypress-mailslurp": "^1.10.0"
   }
 }
