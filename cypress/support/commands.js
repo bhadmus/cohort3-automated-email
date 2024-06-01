@@ -29,5 +29,5 @@ Cypress.Commands.add('clickAnyElement', (element)=>{
 })
 
 Cypress.Commands.add('typeAnyText', (field, text)=>{
-    cy.get(field).should('exist').type(text)
+    cy.get(field).should('exist').fill(text)
 })

@@ -7,6 +7,7 @@ module.exports = defineConfig({
     viewportHeight: 938,
     viewportWidth: 1520,
     chromeWebSecurity: false,
+    watchForFileChanges: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
