@@ -1,0 +1,23 @@
+{
+  "name": "week-four",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhadmus/cohort3-automated-email.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhadmus/cohort3-automated-email/issues"
+  },
+  "homepage": "https://github.com/bhadmus/cohort3-automated-email#readme",
+  "devDependencies": {
+    "cypress": "^13.10.0"
+  }
+}
